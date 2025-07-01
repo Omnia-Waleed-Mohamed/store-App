@@ -18,10 +18,11 @@ class ProductModel {
   factory ProductModel.fromjson(jsonData){
     return ProductModel(id: jsonData['id'],
                          title:jsonData['title'],
-                          price: jsonData['price'], 
+                         // price: jsonData['price'], 
+                         price: (jsonData['price'] as num).toDouble(),
                           description: jsonData['description'], 
                           image:jsonData['image'],
-                          rating: RatingModel.fromjson(jsonData['rate']));
+                          rating: RatingModel.fromjson(jsonData['rating']));
   }
 
 }
@@ -36,7 +37,15 @@ class RatingModel{
     required this.count
   });
 
-  factory RatingModel.fromjson(jsonData){
-    return RatingModel(rate: jsonData['rate'], count: jsonData['count']);
-  }
+  // factory RatingModel.fromjson(jsonData){
+  //   return RatingModel(rate: jsonData['rate'], count: jsonData['count']);
+  // }
+  factory RatingModel.fromjson(jsonData) {
+  return RatingModel(
+    rate: (jsonData['rate'] as num).toDouble(),
+    count: jsonData['count'] ?? 0,
+  );
+}
+
+  
 }
