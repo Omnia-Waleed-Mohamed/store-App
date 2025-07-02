@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         childAspectRatio: 0.75,
                       ),
                       itemBuilder: (context, index) {
-                        return ProductItemWidget(product: products[index]);
+                        return ProductItemWidget(product: products[index],selectedCategory: selectedCategory);
                       },
                     ),
                   ),
