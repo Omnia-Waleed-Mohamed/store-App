@@ -35,3 +35,6 @@ Users can view products, filter them by category, and update product information
 - **State Management**: `setState`
 - **Clean UI with Custom Widgets**
 - **Navigation**: `Navigator.push`
+
+## Demo of the application 
+https://github.com/user-attachments/assets/af47327e-282c-46ff-81a8-25c0d4904c36
